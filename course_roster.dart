@@ -1,4 +1,4 @@
-// Part 1
+//Part 1
 void main(){
   printWelcome('Course Roster Manager');
 
@@ -15,9 +15,9 @@ void main(){
 
   print('$courseTitle | Capacity: $capacity | Enrolled: ${enrolledStudents.length}');
 
-  // Only createdAt can't be const because DateTime.now() is only known at runtime.
+  //only createdAt cannott be const because DateTime.now() is only known at runtime.
 
-  // Part 3
+  //Part 3
   String? instructorEmail;
   print(instructorEmail ?? 'TBA');
 
@@ -27,7 +27,7 @@ void main(){
   //print(instructorEmail!.length);
   print(instructorEmail?.length ?? 'No email yet');
 
-  // Part 4
+  //Part 4
   String rawNames=' Aiden , maria ,JAMAL , Priya ';
   List<String> cleanNames=[];
   for (var name in rawNames.split(',')) {
@@ -41,7 +41,7 @@ Mobile App Development''';
   print(description);
   print('Seats left:${capacity - enrolledStudents.length}');
 
-  // Part 5
+  //Part 5
   // ~/ and %
   int fullGroups=enrolledStudents.length ~/ 3;
   int leftover=enrolledStudents.length % 3;
@@ -56,14 +56,14 @@ Mobile App Development''';
     print('Not a number.');
   }
 
-  // Cascade ..
+  //cascade ..
   var report=StringBuffer()
     ..write('Report: $courseTitle')
     ..write(' | Cap: $capacity')
     ..write(' | Roster: ${enrolledStudents.length}');
   print(report.toString());
 
-  // Null-safe cascade ?..
+  //Null-safe cascade ?..
   List<String>? extraNotes;
   extraNotes?..add('Room change pending');
   print('Extra notes: $extraNotes');
