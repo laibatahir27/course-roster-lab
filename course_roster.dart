@@ -102,27 +102,6 @@ Mobile App Development''';
   String statusTag=isOpen ? 'OPEN' : 'FULL';
   print(statusTag);
 
-  // Part 7
-  // for-in: full roster, one name per line
-  for(var student in enrolledStudents){
-    print(student);
-  }
-
-  // forEach with (key, value) callback
-  attendanceCount.forEach((key, value){
-    print('$key: $value');
-  });
-
-  // Collection literal with embedded if / for
-  List<String> announcements=[
-    'Welcome to $courseTitle',
-    if (!isOpen) 'Course is FULL — waitlist open',
-    for (var student in waitlist)
-      'Reminder: $student, please confirm attendance',
-  ];
-  for (var message in announcements){
-    print(message);
-  }
 }
 
 /// Prints a welcome banner for the given app name.
